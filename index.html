@@ -21,7 +21,8 @@
 
         /* Header/Navigation */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: rgba(102, 126, 234, 0.95);
+            backdrop-filter: blur(10px);
             color: white;
             padding: 1rem 0;
             position: sticky;
@@ -63,25 +64,85 @@
             opacity: 0.8;
         }
 
-        /* Hero Section */
+        /* Hero Section with Video Background */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
             color: white;
-            padding: 6rem 2rem;
+            padding: 8rem 2rem;
             text-align: center;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Video Background */
+        .hero-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        /* Purple Gradient Overlay */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%);
+            z-index: 2;
+        }
+
+        /* Animated Particles Overlay */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        /* Hero Content */
+        .hero-content {
+            position: relative;
+            z-index: 4;
+            max-width: 1200px;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
             animation: fadeInUp 0.8s ease;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-weight: 700;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
             opacity: 0.95;
             animation: fadeInUp 0.8s ease 0.2s backwards;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
         .cta-buttons {
@@ -93,31 +154,41 @@
         }
 
         .btn {
-            padding: 0.8rem 2rem;
+            padding: 1rem 2.5rem;
             border: none;
             border-radius: 5px;
-            font-size: 1rem;
+            font-size: 1.1rem;
             cursor: pointer;
             text-decoration: none;
             transition: transform 0.3s, box-shadow 0.3s;
             display: inline-block;
+            font-weight: 600;
         }
 
         .btn-primary {
             background: white;
             color: #667eea;
-            font-weight: bold;
         }
 
         .btn-secondary {
             background: rgba(255,255,255,0.2);
             color: white;
             border: 2px solid white;
+            backdrop-filter: blur(10px);
         }
 
         .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Animated Canvas for Particles */
+        #particle-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         /* About Section */
@@ -505,7 +576,7 @@
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .hero p {
@@ -564,13 +635,33 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Video Background -->
     <section class="hero">
-        <h1>Turning Data Into Actionable Insights</h1>
-        <p>Investment Analyst | Data Analyst | Python | SQL | Excel | Power Bi</p>
-        <div class="cta-buttons">
-            <a href="#projects" class="btn btn-primary" onclick="event.preventDefault(); document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">View My Work</a>
-            <a href="#contact" class="btn btn-secondary" onclick="event.preventDefault(); document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get In Touch</a>
+        <!-- Video Background Container -->
+        <div class="hero-video-container">
+            <!-- REPLACE THIS URL WITH YOUR VIDEO -->
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="assets/istockphoto-1751686855-640_adpp_is.mp4" type="video/mp4">
+                <!-- Fallback: If video doesn't load, show gradient -->
+            </video>
+        </div>
+        
+        <!-- Purple Gradient Overlay -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Animated Particles -->
+        <div class="particles">
+            <canvas id="particle-canvas"></canvas>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1>Turning Data Into Actionable Insights</h1>
+            <p>Investment & Data Analyst | Python | SQL | Excel | Financial Modeling</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary" onclick="event.preventDefault(); document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">View My Work</a>
+                <a href="#contact" class="btn btn-secondary" onclick="event.preventDefault(); document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get In Touch</a>
+            </div>
         </div>
     </section>
 
@@ -698,20 +789,21 @@
         <div class="education-container">
             <h2>Education</h2>
             <div class="education-grid">
-                <div class="education-card">
-                    <div class="education-icon">🎓</div>
-                    <h3>Egerton University</h3>
-                    <div class="degree">Bachelor of Arts in Economics & Sociology</div>
-                    <div class="year">Graduated: 2019</div>
-                    <p>Coursework: Statistics and Econometrics, Macro and Micro Economics, Development Economics, Research Methodology, Sociology of Development & Organization, Sociology of Gender, Poverty & Rural Studies and Data Analysis</p>
-                </div>
-                
+               
                 <div class="education-card">
                     <div class="education-icon">💼</div>
                     <h3>CFA Institute</h3>
                     <div class="degree">Chartered Financial Analyst (CFA)</div>
-                    <div class="year">2022-2025</div>
+                    <div class="year">2025</div>
                     <p>Intensive program covering Equity Valuation, Fixed Income Valuation, Financial Statement Analysis, Corporate Finance, Derivatives, Alternative Investments, and Portfolio Management with real-world projects and case studies</p>
+                </div>
+
+                 <div class="education-card">
+                    <div class="education-icon">🎓</div>
+                    <h3>Egerton University</h3>
+                    <div class="degree">Bachelor of Arts in Economics & Sociology</div>
+                    <div class="year">Graduated: 2019</div>
+                    <p>Relevant coursework: Statistics and Econometrics, Macro and Micro Economics, Development Economics, Research Methodology, Sociology of Development & Organization, Sociology of Gender, Poverty & Rural Studies and Data Analysis</p>
                 </div>
             </div>
         </div>
@@ -762,13 +854,4 @@
                 <a href="https://github.com/Kimuyu-Charles" target="_blank">GitHub: @Kimuyu-Charles</a>
             </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Charles Kimuyu | Investment & Data Analyst Portfolio</p>
-    </footer>
-</body>
-
-</html>
-
+    </section
