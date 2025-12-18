@@ -14,21 +14,21 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #1f2933;
             background: #f5f5f5;
             scroll-behavior: smooth;
         }
 
         /* Header/Navigation */
         header {
-            background: rgba(102, 126, 234, 0.95);
+            background: rgba(37, 99, 235, 0.95);
             backdrop-filter: blur(10px);
             color: white;
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(15, 23, 42, 0.15);
         }
 
         nav {
@@ -61,7 +61,7 @@
         }
 
         nav a:hover {
-            opacity: 0.8;
+            opacity: 0.85;
         }
 
         /* Hero Section with Video Background */
@@ -77,7 +77,6 @@
             justify-content: center;
         }
 
-        /* Video Background */
         .hero-video-container {
             position: absolute;
             top: 0;
@@ -100,32 +99,25 @@
             object-fit: cover;
         }
 
-        /* Purple Gradient Overlay */
+        /* Calmer navy/blue gradient overlay */
         .hero-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%);
+            background: linear-gradient(
+                135deg,
+                rgba(15, 23, 42, 0.92) 0%,
+                rgba(37, 99, 235, 0.90) 100%
+            );
             z-index: 2;
-        }
-
-        /* Animated Particles Overlay */
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 3;
-            pointer-events: none;
         }
 
         /* Hero Content */
         .hero-content {
             position: relative;
-            z-index: 4;
+            z-index: 3;
             max-width: 1200px;
         }
 
@@ -133,7 +125,7 @@
             font-size: 3.5rem;
             margin-bottom: 1rem;
             animation: fadeInUp 0.8s ease;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.35);
             font-weight: 700;
         }
 
@@ -160,18 +152,18 @@
             font-size: 1.1rem;
             cursor: pointer;
             text-decoration: none;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
             display: inline-block;
             font-weight: 600;
         }
 
         .btn-primary {
             background: white;
-            color: #667eea;
+            color: #2563eb;
         }
 
         .btn-secondary {
-            background: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.12);
             color: white;
             border: 2px solid white;
             backdrop-filter: blur(10px);
@@ -179,16 +171,7 @@
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-        }
-
-        /* Animated Canvas for Particles */
-        #particle-canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.25);
         }
 
         /* About Section */
@@ -207,26 +190,26 @@
             max-width: 300px;
             height: 300px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1f2937 0%, #2563eb 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 5rem;
             color: white;
             margin: 0 auto;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 28px rgba(15, 23, 42, 0.35);
         }
 
         .about-content h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: #667eea;
+            color: #2563eb;
         }
 
         .about-content p {
             margin-bottom: 1rem;
-            font-size: 1.1rem;
-            color: #666;
+            font-size: 1.05rem;
+            color: #4b5563;
             line-height: 1.8;
         }
 
@@ -245,12 +228,12 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #667eea;
+            color: #2563eb;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 2rem;
         }
 
@@ -259,14 +242,15 @@
             padding: 2rem;
             border-radius: 10px;
             text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
             border: 2px solid transparent;
+            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
         }
 
         .skill-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
-            border-color: #667eea;
+            box-shadow: 0 10px 26px rgba(15, 23, 42, 0.18);
+            border-color: #2563eb;
         }
 
         .skill-icon {
@@ -276,12 +260,12 @@
 
         .skill-card h3 {
             margin-bottom: 0.5rem;
-            color: #333;
+            color: #111827;
         }
 
         .skill-card p {
-            font-size: 0.9rem;
-            color: #666;
+            font-size: 0.95rem;
+            color: #4b5563;
         }
 
         /* Projects Section */
@@ -294,8 +278,16 @@
         .projects h2 {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #667eea;
+            margin-bottom: 1rem;
+            color: #2563eb;
+        }
+
+        .projects-intro {
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            text-align: center;
+            color: #4b5563;
+            font-size: 1rem;
         }
 
         .project-grid {
@@ -307,7 +299,7 @@
             background: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 16px rgba(15, 23, 42, 0.12);
             transition: transform 0.3s, box-shadow 0.3s;
             display: grid;
             grid-template-columns: 300px 1fr;
@@ -316,18 +308,7 @@
 
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
-        }
-
-        .project-image {
-            width: 300px;
-            height: 250px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.2);
         }
 
         .project-content {
@@ -337,7 +318,7 @@
         .project-content h3 {
             font-size: 1.8rem;
             margin-bottom: 0.5rem;
-            color: #333;
+            color: #111827;
         }
 
         .project-tech {
@@ -348,7 +329,7 @@
         }
 
         .tech-tag {
-            background: #667eea;
+            background: #2563eb;
             color: white;
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
@@ -357,7 +338,7 @@
         }
 
         .project-content p {
-            color: #666;
+            color: #4b5563;
             margin-bottom: 1rem;
             line-height: 1.8;
         }
@@ -370,7 +351,7 @@
 
         .project-links a {
             padding: 0.6rem 1.5rem;
-            background: #667eea;
+            background: #2563eb;
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -379,7 +360,7 @@
         }
 
         .project-links a:hover {
-            background: #764ba2;
+            background: #1d4ed8;
             transform: scale(1.05);
         }
 
@@ -398,7 +379,7 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #667eea;
+            color: #2563eb;
         }
 
         .education-grid {
@@ -411,13 +392,13 @@
             background: #f8f9fa;
             padding: 2rem;
             border-radius: 10px;
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #2563eb;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .education-card:hover {
             transform: translateX(5px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 5px 20px rgba(15, 23, 42, 0.2);
         }
 
         .education-icon {
@@ -427,25 +408,25 @@
 
         .education-card h3 {
             font-size: 1.4rem;
-            color: #333;
+            color: #111827;
             margin-bottom: 0.5rem;
         }
 
         .education-card .degree {
             font-size: 1.1rem;
-            color: #667eea;
+            color: #2563eb;
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
 
         .education-card .year {
-            color: #999;
+            color: #9ca3af;
             margin-bottom: 1rem;
             font-style: italic;
         }
 
         .education-card p {
-            color: #666;
+            color: #4b5563;
             line-height: 1.6;
         }
 
@@ -460,7 +441,7 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #667eea;
+            color: #2563eb;
         }
 
         .cert-grid {
@@ -480,7 +461,7 @@
 
         .cert-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
         }
 
         .cert-icon {
@@ -490,24 +471,24 @@
 
         .cert-card h3 {
             font-size: 1.2rem;
-            color: #333;
+            color: #111827;
             margin-bottom: 0.5rem;
         }
 
         .cert-card .issuer {
-            color: #667eea;
+            color: #2563eb;
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
 
         .cert-card .date {
-            color: #999;
+            color: #9ca3af;
             font-size: 0.9rem;
         }
 
         /* Contact Section */
         .contact {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #111827 0%, #2563eb 100%);
             color: white;
             padding: 4rem 2rem;
             text-align: center;
@@ -546,7 +527,7 @@
         }
 
         .contact-item a:hover {
-            opacity: 0.8;
+            opacity: 0.85;
         }
 
         .contact-icon {
@@ -555,10 +536,11 @@
 
         /* Footer */
         footer {
-            background: #333;
+            background: #111827;
             color: white;
             text-align: center;
-            padding: 2rem;
+            padding: 1.5rem;
+            font-size: 0.9rem;
         }
 
         /* Animations */
@@ -592,11 +574,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .project-image {
-                width: 100%;
-                height: 200px;
-            }
-
             .project-content {
                 padding: 2rem;
             }
@@ -607,7 +584,7 @@
             }
 
             .skills-grid {
-                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             }
 
             .education-grid {
@@ -637,30 +614,31 @@
 
     <!-- Hero Section with Video Background -->
     <section class="hero">
-        <!-- Video Background Container -->
         <div class="hero-video-container">
-            <!-- REPLACE THIS URL WITH YOUR VIDEO -->
             <video class="hero-video" autoplay muted loop playsinline>
                 <source src="assets/istockphoto-1751686855-640_adpp_is.mp4" type="video/mp4">
-                <!-- Fallback: If video doesn't load, show gradient -->
             </video>
         </div>
-        
-        <!-- Purple Gradient Overlay -->
+
+        <!-- Calmer overlay -->
         <div class="hero-overlay"></div>
-        
-        <!-- Animated Particles -->
-        <div class="particles">
-            <canvas id="particle-canvas"></canvas>
-        </div>
-        
+
         <!-- Hero Content -->
         <div class="hero-content">
             <h1>Turning Data Into Actionable Insights</h1>
-            <p>Investment & Data Analyst | Python | SQL | Excel | Financial Modeling</p>
+            <p>Investment &amp; Data Analyst | Python | SQL | Excel | Financial Modeling | Power BI</p>
             <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary" onclick="event.preventDefault(); document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">View My Work</a>
-                <a href="#contact" class="btn btn-secondary" onclick="event.preventDefault(); document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get In Touch</a>
+                <a href="#projects" class="btn btn-primary"
+                   onclick="event.preventDefault(); document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">
+                    View My Work
+                </a>
+                <a href="#contact" class="btn btn-secondary"
+                   onclick="event.preventDefault(); document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                    Get In Touch
+                </a>
+                <a href="assets/Kimuyu_CV.pdf" target="_blank" class="btn btn-secondary">
+                    Download CV
+                </a>
             </div>
         </div>
     </section>
@@ -670,9 +648,9 @@
         <div class="profile-img">📊</div>
         <div class="about-content">
             <h2>About Me</h2>
-            <p>I'm Charles Kimuyu, an investment and data analyst passionate about transforming complex datasets into clear, actionable insights that drive strategic business decisions. Based in Nairobi, I specialize in uncovering patterns, building predictive models, and creating compelling visualizations that tell the story behind the numbers.</p>
-            <p>With expertise spanning Financial Modeling, Python, SQL, and Excel, I've tackled diverse analytical challenges—from analyzing global pandemic trends to forecasting sales performance and building comprehensive financial models. My approach combines technical rigor with business acumen, ensuring that every analysis delivers real value.</p>
-            <p>I believe the best data analysis doesn't just answer questions—it sparks better questions and drives informed action. Whether it's identifying revenue opportunities, optimizing operations, or predicting future trends, I bring curiosity, precision, and a results-driven mindset to every project.</p>
+            <p>I'm Charles Kimuyu, an Investment &amp; Data Analyst based in Nairobi. I sit at the intersection of finance and analytics: I’m as comfortable building a three-statement model or valuing a company as I am writing Python code, shaping data in SQL, or designing a Power BI dashboard.</p>
+            <p>By day, I work as a Data Analytics Coordinator at Kenya Builders &amp; Concrete, where I’ve automated reporting in Power BI, improved data quality, and helped management track margins, costs, and operational KPIs in near real time. On the side, I build models and tools that blend corporate finance, markets, and data science — from crypto risk dashboards to machine-learning forecasting experiments.</p>
+            <p>As a CFA charterholder with a background in Economics &amp; Sociology, I bring strong grounding in valuation, financial statements, and portfolio thinking. My goal on every project is the same: turn noisy data into clear, decision-ready insight that a CFO, PM, or founder can actually use.</p>
         </div>
     </section>
 
@@ -683,234 +661,245 @@
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">🐍</div>
-                    <h3>Python</h3>
-                    <p>Pandas, NumPy, Matplotlib, Seaborn</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🗄️</div>
-                    <h3>SQL</h3>
-                    <p>Data Querying & Management</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">📈</div>
-                    <h3>Excel</h3>
-                    <p>Financial Modeling, VBA, Pivot Tables</p>
+                    <h3>Python &amp; Notebooks</h3>
+                    <p>Pandas, NumPy, Matplotlib, Seaborn, Jupyter, scikit-learn, time-series &amp; NLP basics.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">📊</div>
-                    <h3>Tableau</h3>
-                    <p>Interactive Dashboards</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">📉</div>
-                    <h3>Statistical Analysis</h3>
-                    <p>Hypothesis Testing, Forecasting</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">💡</div>
                     <h3>Business Intelligence</h3>
-                    <p>Strategic Insights & Reporting</p>
+                    <p>Power BI (DAX, data modeling, dashboards), Tableau, report design &amp; stakeholder storytelling.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Databases &amp; SQL</h3>
+                    <p>Query design, joins, aggregations, view creation, performance-minded analytical queries.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📈</div>
+                    <h3>Financial Modeling</h3>
+                    <p>Three-statement models, DCF, scenario &amp; sensitivity analysis, FAST-style spreadsheets.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3>Machine Learning</h3>
+                    <p>Supervised models, forecasting experiments, model evaluation, feature engineering.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🧩</div>
+                    <h3>Tools &amp; Workflow</h3>
+                    <p>Excel/VBA, Git &amp; GitHub, data cleaning/ETL, documentation, clear communication of results.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Project 1: Crypto Performance & Risk Dashboard -->
-<div class="project-card">
-  <div class="profile-img"
-       style="background-image: url('assets/Crypto Theme.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
-  <div class="project-content">
-    <h3>Crypto Performance & Risk Dashboard in Power BI</h3>
-    <div class="project-tech">
-      <span class="tech-tag">Power BI</span>
-      <span class="tech-tag">DAX</span>
-      <span class="tech-tag">Data Modeling</span>
-      <span class="tech-tag">Data Visualization</span>
-      <span class="tech-tag">Crypto Analytics</span>
-    </div>
-    <p>Designed a two-page Power BI dashboard analyzing the top 1000 cryptocurrencies across market structure, performance, volatility, liquidity, and tokenomics.</p>
-    <p><strong>Key Features:</strong> Market overview with market-cap distribution by tier, Top-10 vs others, and size-vs-volume scatter; Performance & Risk Explorer with timeframe heatmap, return/volatility/drawdown distributions, and synced slicers for rank, tier, and symbol. Tokenomics module tracks supply utilization and Volume-to-Market-Cap and highlights coins with extreme circulating supply profiles.</p>
-    <p><strong>Business Impact:</strong> Turns raw market data into an actionable risk-and-opportunity map, enabling faster crypto research and helping users spot liquid movers, deep drawdowns, and projects with unusual tokenomics for deeper due diligence.</p>
-    <div class="project-links">
-      <a href="https://github.com/Kimuyu-Charles/Power-Bi-Crypto-Performance-Risk-Dashboard" target="_blank">View Project</a>
-    </div>
-  </div>
-</div>
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2>Selected Projects</h2>
+        <p class="projects-intro">
+            I work at the intersection of <strong>investment analysis</strong> and <strong>data science</strong> —
+            from corporate and crypto valuation models to Python-based forecasting, NLP on company text,
+            and Power BI dashboards for market and risk analytics.
+        </p>
 
-<!-- Project 2: Financial Modeling -->
-<div class="project-card">
-  <div class="profile-img"
-       style="background-image: url('assets/Financial Model.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
-  <div class="project-content">
-    <h3>Advanced Financial Modeling in Excel</h3>
-    <div class="project-tech">
-      <span class="tech-tag">Excel</span>
-      <span class="tech-tag">VBA</span>
-      <span class="tech-tag">Financial Analysis</span>
-      <span class="tech-tag">DCF Modeling</span>
-      <span class="tech-tag">Scenario Planning</span>
-    </div>
-    <p>Built a fully linked three-statement financial model (Income Statement, Balance Sheet, Cash Flow) with automated calculations, DCF valuation, sensitivity analysis, and Monte Carlo simulation.</p>
-    <p><strong>Key Features:</strong> Automated revenue forecasting under bull/base/bear scenarios, integrated working-capital metrics (DSO, inventory turns), created KPI dashboards, and implemented variance analysis to compare actuals vs projections with automatic flagging of key deviations.</p>
-    <p><strong>Business Impact:</strong> Reduced monthly reporting time by ~40% and enabled faster assessment of strategic decisions, with scenario and sensitivity analysis highlighting the main value drivers and risk factors.</p>
-    <div class="project-links">
-      <a href="https://github.com/Kimuyu-Charles/Financial-Model" target="_blank">Download Model</a>
-    </div>
-  </div>
-</div>
+        <div class="project-grid">
+            <!-- Project 1: Crypto Performance & Risk Dashboard -->
+            <div class="project-card">
+                <div class="profile-img"
+                     style="background-image: url('assets/Crypto Theme.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
+                <div class="project-content">
+                    <h3>Crypto Performance &amp; Risk Dashboard in Power BI</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">DAX</span>
+                        <span class="tech-tag">Data Modeling</span>
+                        <span class="tech-tag">Data Visualization</span>
+                        <span class="tech-tag">Crypto Analytics</span>
+                    </div>
+                    <p>Designed a two-page Power BI dashboard analyzing the top 1000 cryptocurrencies across market structure, performance, volatility, liquidity, and tokenomics.</p>
+                    <p><strong>Key Features:</strong> Market overview with market-cap distribution by tier, Top-10 vs others, and size-vs-volume scatter; Performance &amp; Risk Explorer with timeframe heatmap, return/volatility/drawdown distributions, and synced slicers for rank, tier, and symbol. Tokenomics module tracks supply utilization and Volume-to-Market-Cap and highlights coins with extreme circulating supply profiles.</p>
+                    <p><strong>Business Impact:</strong> Turns raw market data into an actionable risk-and-opportunity map, enabling faster crypto research and helping users spot liquid movers, deep drawdowns, and projects with unusual tokenomics for deeper due diligence.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Kimuyu-Charles/Power-Bi-Crypto-Performance-Risk-Dashboard" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
 
-<!-- Project 3: Corporate Finance Model using FAST -->
-<div class="project-card">
-  <div class="profile-img"
-       style="background-image: url('assets/Forecast Dashboard.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
-  <div class="project-content">
-    <h3>Corporate Finance Model Using FAST Standards</h3>
-    <div class="project-tech">
-      <span class="tech-tag">Excel</span>
-      <span class="tech-tag">Financial Modeling</span>
-      <span class="tech-tag">FAST Standards</span>
-      <span class="tech-tag">Valuation</span>
-      <span class="tech-tag">Corporate Finance</span>
-    </div>
-    <p>Built a corporate finance model for a listed tobacco manufacturer in Kenya, structured using the FAST (Flexible, Appropriate, Structured, Transparent) financial modeling standards.</p>
-    <p><strong>Key Features:</strong> Integrated historical financials, operating drivers, and funding assumptions into an integrated three-statement model with valuation outputs (enterprise value, equity value) and scenario analysis for key revenue and margin drivers.</p>
-    <p><strong>Business Impact:</strong> Provides a transparent, audit-friendly model that can be used for valuation, credit analysis, and strategy discussions, with a structure that can be reused for other corporate finance case studies.</p>
-    <div class="project-links">
-      <a href="https://github.com/Kimuyu-Charles/Corporate-Finance-Model-using-FAST" target="_blank">Download Model</a>
-    </div>
-  </div>
-</div>
+            <!-- Project 2: Financial Modeling -->
+            <div class="project-card">
+                <div class="profile-img"
+                     style="background-image: url('assets/Financial Model.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
+                <div class="project-content">
+                    <h3>Advanced Financial Modeling in Excel</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">Excel</span>
+                        <span class="tech-tag">VBA</span>
+                        <span class="tech-tag">Financial Analysis</span>
+                        <span class="tech-tag">DCF Modeling</span>
+                        <span class="tech-tag">Scenario Planning</span>
+                    </div>
+                    <p>Built a fully linked three-statement financial model (Income Statement, Balance Sheet, Cash Flow) with automated calculations, DCF valuation, sensitivity analysis, and Monte Carlo simulation.</p>
+                    <p><strong>Key Features:</strong> Automated revenue forecasting under bull/base/bear scenarios, integrated working-capital metrics (DSO, inventory turns), created KPI dashboards, and implemented variance analysis to compare actuals vs projections with automatic flagging of key deviations.</p>
+                    <p><strong>Business Impact:</strong> Reduced monthly reporting time by ~40% and enabled faster assessment of strategic decisions, with scenario and sensitivity analysis highlighting the main value drivers and risk factors.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Kimuyu-Charles/Financial-Model" target="_blank">Download Model</a>
+                    </div>
+                </div>
+            </div>
 
-<!-- Project 4: Financial Forecasting Using Machine and Deep Learning -->
-<div class="project-card">
-  <div class="profile-img"
-       style="background-image: url('assets/Machine Learning.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
-  <div class="project-content">
-    <h3>Financial Forecasting with Machine & Deep Learning</h3>
-    <div class="project-tech">
-      <span class="tech-tag">Python</span>
-      <span class="tech-tag">Jupyter</span>
-      <span class="tech-tag">Time Series</span>
-      <span class="tech-tag">Machine Learning</span>
-      <span class="tech-tag">Deep Learning</span>
-    </div>
-    <p>Experiments with forecasting financial time series using a mix of traditional models and modern ML/DL architectures, comparing their ability to capture trends, seasonality, and regime changes.</p>
-    <p><strong>Key Features:</strong> Implements baselines (moving average / AR-type models) alongside machine learning approaches and recurrent neural networks, with a consistent evaluation framework for train/test splits and forecast accuracy.</p>
-    <p><strong>Business Impact:</strong> Demonstrates how more advanced models can augment classic forecasting techniques for markets and financial KPIs, highlighting where extra model complexity genuinely adds value versus where simpler models are sufficient.</p>
-    <div class="project-links">
-      <a href="https://github.com/Kimuyu-Charles/Financial-Forecasting-Using-Machine-and-Deep-Learning-" target="_blank">View Notebook</a>
-    </div>
-  </div>
-</div>
+            <!-- Project 3: Corporate Finance Model using FAST -->
+            <div class="project-card">
+                <div class="profile-img"
+                     style="background-image: url('assets/Forecast Dashboard.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
+                <div class="project-content">
+                    <h3>Corporate Finance Model Using FAST Standards</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">Excel</span>
+                        <span class="tech-tag">Financial Modeling</span>
+                        <span class="tech-tag">FAST Standards</span>
+                        <span class="tech-tag">Valuation</span>
+                        <span class="tech-tag">Corporate Finance</span>
+                    </div>
+                    <p>Built a corporate finance model for a listed tobacco manufacturer in Kenya, structured using the FAST (Flexible, Appropriate, Structured, Transparent) financial modeling standards.</p>
+                    <p><strong>Key Features:</strong> Integrated historical financials, operating drivers, and funding assumptions into an integrated three-statement model with valuation outputs (enterprise value, equity value) and scenario analysis for key revenue and margin drivers.</p>
+                    <p><strong>Business Impact:</strong> Provides a transparent, audit-friendly model that can be used for valuation, credit analysis, and strategy discussions, with a structure that can be reused for other corporate finance case studies.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Kimuyu-Charles/Corporate-Finance-Model-using-FAST" target="_blank">Download Model</a>
+                    </div>
+                </div>
+            </div>
 
-<!-- Project 5: Sales Analysis -->
-<div class="project-card">
-  <div class="profile-img"
-       style="background-image: url('assets/Sales.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
-  <div class="project-content">
-    <h3>Sales Performance Analysis & Revenue Forecasting</h3>
-    <div class="project-tech">
-      <span class="tech-tag">Python</span>
-      <span class="tech-tag">Pandas</span>
-      <span class="tech-tag">NumPy</span>
-      <span class="tech-tag">Matplotlib</span>
-      <span class="tech-tag">Predictive Modeling</span>
-    </div>
-    <p>Explored 12 months of retail sales data (185k+ transactions) to uncover revenue drivers, customer behaviour, and seasonality, then built time-series models to forecast future sales.</p>
-    <p><strong>Key Insights:</strong> Confirmed a Pareto pattern where ~20% of products generated the majority of revenue, identified price points where demand elasticity shifted, and showed that mid-week (Tue–Thu) daytime hours drove over half of weekly sales volume.</p>
-    <p><strong>Business Impact:</strong> Recommended targeted promotion of high-value products, inventory rebalancing to cut holding costs, and optimized promo timing—together supporting higher conversion rates and more efficient stock planning.</p>
-    <div class="project-links">
-      <a href="https://github.com/Kimuyu-Charles/Sales-Analysis" target="_blank">View Code</a>
-    </div>
-  </div>
-</div>
+            <!-- Project 4: Financial Forecasting Using Machine and Deep Learning -->
+            <div class="project-card">
+                <div class="profile-img"
+                     style="background-image: url('assets/Machine Learning.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
+                <div class="project-content">
+                    <h3>Financial Forecasting with Machine &amp; Deep Learning</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Jupyter</span>
+                        <span class="tech-tag">Time Series</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">Deep Learning</span>
+                    </div>
+                    <p>Experiments with forecasting financial time series using a mix of traditional models and modern ML/DL architectures, comparing their ability to capture trends, seasonality, and regime changes.</p>
+                    <p><strong>Key Features:</strong> Implements baselines (moving average / AR-type models) alongside machine learning approaches and recurrent neural networks, with a consistent evaluation framework for train/test splits and forecast accuracy.</p>
+                    <p><strong>Business Impact:</strong> Demonstrates how more advanced models can augment classic forecasting techniques for markets and financial KPIs, highlighting where extra model complexity genuinely adds value versus where simpler models are sufficient.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Kimuyu-Charles/Financial-Forecasting-Using-Machine-and-Deep-Learning-" target="_blank">View Notebook</a>
+                    </div>
+                </div>
+            </div>
 
-<!-- Project 6: Data Collection, Wrangling & Feature Engineering -->
-<div class="project-card">
-  <div class="profile-img"
-       style="background-image: url('assets/Feature Engineering.jpg'); background-size: cover; background-position: center; font-size: 0;">📊</div>
-  <div class="project-content">
-    <h3>Data Collection, Wrangling & Feature Engineering</h3>
-    <div class="project-tech">
-      <span class="tech-tag">Python</span>
-      <span class="tech-tag">Pandas</span>
-      <span class="tech-tag">Data Cleaning</span>
-      <span class="tech-tag">Feature Engineering</span>
-      <span class="tech-tag">ETL</span>
-    </div>
-    <p>End-to-end data pipeline project that takes raw company and industry data from CSV sources through cleaning, standardisation, and feature creation ready for modeling.</p>
-    <p><strong>Key Features:</strong> Handles missing values, type inconsistencies, and categorical encoding; engineers domain-relevant features such as size buckets, sector groupings, and ratio metrics; and structures the workflow in a reproducible Jupyter notebook.</p>
-    <p><strong>Business Impact:</strong> Showcases the “unseen” work behind any robust model—turning messy datasets into reliable, analysis-ready tables that improve model stability and interpretability.</p>
-    <div class="project-links">
-      <a href="https://github.com/Kimuyu-Charles/Data-Collection-Wrangling-Feature-Engineering" target="_blank">View Notebook</a>
-    </div>
-  </div>
-</div>
+            <!-- Project 5: Sales Analysis -->
+            <div class="project-card">
+                <div class="profile-img"
+                     style="background-image: url('assets/Sales.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
+                <div class="project-content">
+                    <h3>Sales Performance Analysis &amp; Revenue Forecasting</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">Predictive Modeling</span>
+                    </div>
+                    <p>Explored 12 months of retail sales data (185k+ transactions) to uncover revenue drivers, customer behaviour, and seasonality, then built time-series models to forecast future sales.</p>
+                    <p><strong>Key Insights:</strong> Confirmed a Pareto pattern where ~20% of products generated the majority of revenue, identified price points where demand elasticity shifted, and showed that mid-week (Tue–Thu) daytime hours drove over half of weekly sales volume.</p>
+                    <p><strong>Business Impact:</strong> Recommended targeted promotion of high-value products, inventory rebalancing to cut holding costs, and optimized promo timing—together supporting higher conversion rates and more efficient stock planning.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Kimuyu-Charles/Sales-Analysis" target="_blank">View Code</a>
+                    </div>
+                </div>
+            </div>
 
-<!-- Project 7: Natural Language Processing -->
-<div class="project-card">
-  <div class="profile-img"
-       style="background-image: url('assets/Natural Language Processing.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
-  <div class="project-content">
-    <h3>Natural Language Processing for Company Text Data</h3>
-    <div class="project-tech">
-      <span class="tech-tag">Python</span>
-      <span class="tech-tag">NLP</span>
-      <span class="tech-tag">Text Processing</span>
-      <span class="tech-tag">Feature Engineering</span>
-      <span class="tech-tag">Jupyter</span>
-    </div>
-    <p>Applies core NLP techniques to company and industry text data, transforming unstructured descriptions into structured features for downstream analysis.</p>
-    <p><strong>Key Features:</strong> Includes text cleaning and tokenisation, creation of numerical text representations (such as bag-of-words / TF-IDF-style features), and exploratory analysis of term usage across industries and companies.</p>
-    <p><strong>Business Impact:</strong> Illustrates how textual disclosures and descriptions can be converted into quantitative signals, opening the door to richer screening, clustering, or risk-scoring models in fundamental and credit analysis.</p>
-    <div class="project-links">
-      <a href="https://github.com/Kimuyu-Charles/Natural-Language-Processing" target="_blank">View Notebook</a>
-    </div>
-  </div>
-</div>
+            <!-- Project 6: Data Collection, Wrangling & Feature Engineering -->
+            <div class="project-card">
+                <div class="profile-img"
+                     style="background-image: url('assets/Feature Engineering.jpg'); background-size: cover; background-position: center; font-size: 0;">📊</div>
+                <div class="project-content">
+                    <h3>Data Collection, Wrangling &amp; Feature Engineering</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Data Cleaning</span>
+                        <span class="tech-tag">Feature Engineering</span>
+                        <span class="tech-tag">ETL</span>
+                    </div>
+                    <p>End-to-end data pipeline project that takes raw company and industry data from CSV sources through cleaning, standardisation, and feature creation ready for modeling.</p>
+                    <p><strong>Key Features:</strong> Handles missing values, type inconsistencies, and categorical encoding; engineers domain-relevant features such as size buckets, sector groupings, and ratio metrics; and structures the workflow in a reproducible Jupyter notebook.</p>
+                    <p><strong>Business Impact:</strong> Showcases the “unseen” work behind any robust model—turning messy datasets into reliable, analysis-ready tables that improve model stability and interpretability.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Kimuyu-Charles/Data-Collection-Wrangling-Feature-Engineering" target="_blank">View Notebook</a>
+                    </div>
+                </div>
+            </div>
 
-<!-- Project 8: COVID-19 Analysis -->
-<div class="project-card">
-  <div class="profile-img"
-       style="background-image: url('assets/Covid.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
-  <div class="project-content">
-    <h3>COVID-19 Global Impact & Vaccination Analysis</h3>
-    <div class="project-tech">
-      <span class="tech-tag">Python</span>
-      <span class="tech-tag">Pandas</span>
-      <span class="tech-tag">Matplotlib</span>
-      <span class="tech-tag">Seaborn</span>
-      <span class="tech-tag">Data Visualization</span>
-    </div>
-    <p>Analyzed the global progression of COVID-19 and vaccination rollout across 50+ countries, comparing vaccine uptake, infection trends, and mortality outcomes over time.</p>
-    <p><strong>Key Insights:</strong> Identified a strong negative relationship between vaccination rates and infection levels after a 60-day lag. Countries surpassing 60% vaccination coverage showed a large reduction in severe cases and deaths, with three major pandemic waves affecting regions differently.</p>
-    <p><strong>Business Impact:</strong> The analysis framework supported public-health policy discussions, helping stakeholders evaluate vaccination strategies and prioritize resource allocation for future waves.</p>
-    <div class="project-links">
-      <a href="https://github.com/Kimuyu-Charles/Covid-19-Analysis" target="_blank">View Code</a>
-    </div>
-  </div>
-</div>
+            <!-- Project 7: Natural Language Processing -->
+            <div class="project-card">
+                <div class="profile-img"
+                     style="background-image: url('assets/Natural Language Processing.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
+                <div class="project-content">
+                    <h3>Natural Language Processing for Company Text Data</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Text Processing</span>
+                        <span class="tech-tag">Feature Engineering</span>
+                        <span class="tech-tag">Jupyter</span>
+                    </div>
+                    <p>Applies core NLP techniques to company and industry text data, transforming unstructured descriptions into structured features for downstream analysis.</p>
+                    <p><strong>Key Features:</strong> Includes text cleaning and tokenisation, creation of numerical text representations (such as bag-of-words / TF-IDF-style features), and exploratory analysis of term usage across industries and companies.</p>
+                    <p><strong>Business Impact:</strong> Illustrates how textual disclosures and descriptions can be converted into quantitative signals, opening the door to richer screening, clustering, or risk-scoring models in fundamental and credit analysis.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Kimuyu-Charles/Natural-Language-Processing" target="_blank">View Notebook</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 8: COVID-19 Analysis -->
+            <div class="project-card">
+                <div class="profile-img"
+                     style="background-image: url('assets/Covid.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
+                <div class="project-content">
+                    <h3>COVID-19 Global Impact &amp; Vaccination Analysis</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">Seaborn</span>
+                        <span class="tech-tag">Data Visualization</span>
+                    </div>
+                    <p>Analyzed the global progression of COVID-19 and vaccination rollout across 50+ countries, comparing vaccine uptake, infection trends, and mortality outcomes over time.</p>
+                    <p><strong>Key Insights:</strong> Identified a strong negative relationship between vaccination rates and infection levels after a 60-day lag. Countries surpassing 60% vaccination coverage showed a large reduction in severe cases and deaths, with three major pandemic waves affecting regions differently.</p>
+                    <p><strong>Business Impact:</strong> The analysis framework supported public-health policy discussions, helping stakeholders evaluate vaccination strategies and prioritize resource allocation for future waves.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Kimuyu-Charles/Covid-19-Analysis" target="_blank">View Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Education Section -->
     <section class="education" id="education">
         <div class="education-container">
             <h2>Education</h2>
             <div class="education-grid">
-               
                 <div class="education-card">
                     <div class="education-icon">💼</div>
                     <h3>CFA Institute</h3>
                     <div class="degree">Chartered Financial Analyst (CFA)</div>
                     <div class="year">2025</div>
-                    <p>Intensive program covering Equity Valuation, Fixed Income Valuation, Financial Statement Analysis, Corporate Finance, Derivatives, Alternative Investments, and Portfolio Management with real-world projects and case studies</p>
+                    <p>Intensive program covering Equity Valuation, Fixed Income Valuation, Financial Statement Analysis, Corporate Finance, Derivatives, Alternative Investments, and Portfolio Management with real-world projects and case studies.</p>
                 </div>
 
-                 <div class="education-card">
+                <div class="education-card">
                     <div class="education-icon">🎓</div>
                     <h3>Egerton University</h3>
-                    <div class="degree">Bachelor of Arts in Economics & Sociology</div>
+                    <div class="degree">Bachelor of Arts in Economics &amp; Sociology</div>
                     <div class="year">Graduated: 2019</div>
-                    <p>Relevant coursework: Statistics and Econometrics, Macro and Micro Economics, Development Economics, Research Methodology, Sociology of Development & Organization, Sociology of Gender, Poverty & Rural Studies and Data Analysis</p>
+                    <p>Relevant coursework: Statistics and Econometrics, Macro and Micro Economics, Development Economics, Research Methodology, Sociology of Development &amp; Organization, Sociology of Gender, Poverty &amp; Rural Studies and Data Analysis.</p>
                 </div>
             </div>
         </div>
@@ -926,17 +915,17 @@
                 <div class="issuer">Moringa School / DataCamp</div>
                 <div class="date">2023</div>
             </div>
-            
+
             <div class="cert-card">
                 <div class="cert-icon">📈</div>
                 <h3>Data Visualization with Power BI</h3>
                 <div class="issuer">Microsoft / CFI</div>
                 <div class="date">2024</div>
             </div>
-            
+
             <div class="cert-card">
                 <div class="cert-icon">💡</div>
-                <h3>Financial Modeling & Valuation</h3>
+                <h3>Financial Modeling &amp; Valuation</h3>
                 <div class="issuer">CFI / Wall Street Prep</div>
                 <div class="date">2024</div>
             </div>
@@ -946,7 +935,7 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2>Let's Connect</h2>
-        <p>I'm always interested in hearing about new opportunities, collaborations, and challenging finance & data problems</p>
+        <p>I'm always interested in hearing about new opportunities, collaborations, and challenging finance &amp; data problems.</p>
         <div class="contact-info">
             <div class="contact-item">
                 <div class="contact-icon">📧</div>
@@ -961,7 +950,15 @@
                 <a href="https://github.com/Kimuyu-Charles" target="_blank">GitHub: @Kimuyu-Charles</a>
             </div>
         </div>
-    </section
+    </section>
 
+    <footer>
+        &copy; <span id="year"></span> Charles Kimuyu · Investment &amp; Data Analyst
+    </footer>
 
-
+    <script>
+        // Simple current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
