@@ -16,6 +16,11 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary-blue: #011640;        /* rich deep blue */
+            --primary-blue-light: #1c3d8f;  /* accent blue */
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -26,7 +31,7 @@
 
         /* Header/Navigation */
         header {
-            background: rgba(37, 99, 235, 0.95);
+            background: rgba(1, 22, 64, 0.95);
             backdrop-filter: blur(10px);
             color: white;
             padding: 1rem 0;
@@ -113,8 +118,8 @@
             height: 100%;
             background: linear-gradient(
                 135deg,
-                rgba(15, 23, 42, 0.92) 0%,
-                rgba(37, 99, 235, 0.90) 100%
+                rgba(1, 22, 64, 0.96) 0%,
+                rgba(28, 61, 143, 0.9) 100%
             );
             z-index: 2;
         }
@@ -164,7 +169,7 @@
 
         .btn-primary {
             background: white;
-            color: #2563eb;
+            color: var(--primary-blue);
         }
 
         .btn-secondary {
@@ -195,7 +200,7 @@
             max-width: 300px;
             height: 300px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #1f2937 0%, #2563eb 100%);
+            background: linear-gradient(135deg, #1f2937 0%, var(--primary-blue-light) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -216,7 +221,7 @@
         .about-content h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: #2563eb;
+            color: var(--primary-blue-light);
         }
 
         .about-content p {
@@ -241,7 +246,7 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #2563eb;
+            color: var(--primary-blue-light);
         }
 
         .skills-grid {
@@ -263,7 +268,7 @@
         .skill-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 26px rgba(15, 23, 42, 0.18);
-            border-color: #2563eb;
+            border-color: var(--primary-blue-light);
         }
 
         .skill-icon {
@@ -292,7 +297,7 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: #2563eb;
+            color: var(--primary-blue-light);
         }
 
         .projects-intro {
@@ -350,7 +355,7 @@
         }
 
         .tech-tag {
-            background: #2563eb;
+            background: var(--primary-blue);
             color: white;
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
@@ -372,7 +377,7 @@
 
         .project-links a {
             padding: 0.6rem 1.5rem;
-            background: #2563eb;
+            background: var(--primary-blue);
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -381,7 +386,7 @@
         }
 
         .project-links a:hover {
-            background: #1d4ed8;
+            background: var(--primary-blue-light);
             transform: scale(1.05);
         }
 
@@ -400,7 +405,7 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #2563eb;
+            color: var(--primary-blue-light);
         }
 
         .education-grid {
@@ -413,7 +418,7 @@
             background: #f8f9fa;
             padding: 2rem;
             border-radius: 10px;
-            border-left: 4px solid #2563eb;
+            border-left: 4px solid var(--primary-blue);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
@@ -435,7 +440,7 @@
 
         .education-card .degree {
             font-size: 1.1rem;
-            color: #2563eb;
+            color: var(--primary-blue-light);
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
@@ -462,7 +467,7 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #2563eb;
+            color: var(--primary-blue-light);
         }
 
         .cert-grid {
@@ -482,7 +487,7 @@
 
         .cert-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+            box-shadow: 0 10px 30px rgba(1, 22, 64, 0.2);
         }
 
         .cert-icon {
@@ -497,7 +502,7 @@
         }
 
         .cert-card .issuer {
-            color: #2563eb;
+            color: var(--primary-blue-light);
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
@@ -509,7 +514,7 @@
 
         /* Contact Section */
         .contact {
-            background: linear-gradient(135deg, #111827 0%, #2563eb 100%);
+            background: linear-gradient(135deg, #020617 0%, var(--primary-blue) 50%, var(--primary-blue-light) 100%);
             color: white;
             padding: 4rem 2rem;
             text-align: center;
@@ -557,7 +562,7 @@
 
         /* Footer */
         footer {
-            background: #111827;
+            background: #0b1220;
             color: white;
             text-align: center;
             padding: 1.5rem;
@@ -1016,4 +1021,3 @@
     </script>
 </body>
 </html>
-
