@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charles The Analyst | Data Analytics Portfolio</title>
+
+    <!-- Favicon (CK idea) -->
+    <!-- Create a small square logo (e.g. 64x64) and save as assets/ck-favicon.png -->
+    <link rel="icon" type="image/png" href="assets/ck-favicon.png">
+
     <style>
         * {
             margin: 0;
@@ -319,6 +324,14 @@
             box-shadow: 0 10px 30px rgba(15, 23, 42, 0.2);
         }
 
+        .project-image {
+            width: 100%;
+            height: 250px;
+            background: #111827;
+            background-size: cover;
+            background-position: center;
+        }
+
         .project-content {
             padding: 2rem 2rem 2rem 0;
         }
@@ -565,6 +578,11 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            .hero {
+                padding: 6rem 1.5rem;
+                min-height: 500px;
+            }
+
             .hero h1 {
                 font-size: 2.2rem;
             }
@@ -580,6 +598,10 @@
 
             .project-card {
                 grid-template-columns: 1fr;
+            }
+
+            .project-image {
+                height: 220px;
             }
 
             .project-content {
@@ -624,7 +646,7 @@
     <section class="hero">
         <div class="hero-video-container">
             <video class="hero-video" autoplay muted loop playsinline>
-                <source src="assets/Profile Vid_4.mp4" type="video/mp4">
+                <source src="assets/istockphoto-1751686855-640_adpp_is.mp4" type="video/mp4">
             </video>
         </div>
 
@@ -653,7 +675,7 @@
 
     <!-- About Section -->
     <section class="about" id="about">
-        <div class="profile-img about-photo"></div>
+        <div class="profile-img about-photo" role="img" aria-label="Portrait of Charles Kimuyu"></div>
         <div class="about-content">
             <h2>About Me</h2>
             <p>I'm Charles Kimuyu, an Investment &amp; Data Analyst based in Nairobi. I sit at the intersection of finance and analytics: I’m as comfortable building a three-statement model or valuing a company as I am writing Python code, shaping data in SQL, or designing a Power BI dashboard.</p>
@@ -713,8 +735,11 @@
         <div class="project-grid">
             <!-- Project 1: Crypto Performance & Risk Dashboard -->
             <div class="project-card">
-                <div class="profile-img"
-                     style="background-image: url('assets/Crypto Theme.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
+                <div class="project-image"
+                     role="img"
+                     aria-label="Crypto Performance and Risk Dashboard screenshot"
+                     style="background-image: url('assets/Crypto Theme.png');">
+                </div>
                 <div class="project-content">
                     <h3>Crypto Performance &amp; Risk Dashboard in Power BI</h3>
                     <div class="project-tech">
@@ -735,8 +760,11 @@
 
             <!-- Project 2: Financial Modeling -->
             <div class="project-card">
-                <div class="profile-img"
-                     style="background-image: url('assets/Financial Model.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
+                <div class="project-image"
+                     role="img"
+                     aria-label="Advanced Financial Model in Excel"
+                     style="background-image: url('assets/Financial Model.png');">
+                </div>
                 <div class="project-content">
                     <h3>Advanced Financial Modeling in Excel</h3>
                     <div class="project-tech">
@@ -757,8 +785,11 @@
 
             <!-- Project 3: Corporate Finance Model using FAST -->
             <div class="project-card">
-                <div class="profile-img"
-                     style="background-image: url('assets/Forecast Dashboard.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
+                <div class="project-image"
+                     role="img"
+                     aria-label="Corporate finance model dashboard"
+                     style="background-image: url('assets/Forecast Dashboard.png');">
+                </div>
                 <div class="project-content">
                     <h3>Corporate Finance Model Using FAST Standards</h3>
                     <div class="project-tech">
@@ -779,8 +810,11 @@
 
             <!-- Project 4: Financial Forecasting Using Machine and Deep Learning -->
             <div class="project-card">
-                <div class="profile-img"
-                     style="background-image: url('assets/Machine Learning.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
+                <div class="project-image"
+                     role="img"
+                     aria-label="Financial forecasting with machine learning"
+                     style="background-image: url('assets/Machine Learning.png');">
+                </div>
                 <div class="project-content">
                     <h3>Financial Forecasting with Machine &amp; Deep Learning</h3>
                     <div class="project-tech">
@@ -801,8 +835,11 @@
 
             <!-- Project 5: Sales Analysis -->
             <div class="project-card">
-                <div class="profile-img"
-                     style="background-image: url('assets/Sales.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
+                <div class="project-image"
+                     role="img"
+                     aria-label="Sales analysis dashboard"
+                     style="background-image: url('assets/Sales.png');">
+                </div>
                 <div class="project-content">
                     <h3>Sales Performance Analysis &amp; Revenue Forecasting</h3>
                     <div class="project-tech">
@@ -823,8 +860,11 @@
 
             <!-- Project 6: Data Collection, Wrangling & Feature Engineering -->
             <div class="project-card">
-                <div class="profile-img"
-                     style="background-image: url('assets/Feature Engineering.jpg'); background-size: cover; background-position: center; font-size: 0;">📊</div>
+                <div class="project-image"
+                     role="img"
+                     aria-label="Feature engineering and data wrangling notebook"
+                     style="background-image: url('assets/Feature Engineering.jpg');">
+                </div>
                 <div class="project-content">
                     <h3>Data Collection, Wrangling &amp; Feature Engineering</h3>
                     <div class="project-tech">
@@ -845,8 +885,11 @@
 
             <!-- Project 7: Natural Language Processing -->
             <div class="project-card">
-                <div class="profile-img"
-                     style="background-image: url('assets/Natural Language Processing.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
+                <div class="project-image"
+                     role="img"
+                     aria-label="NLP project visuals"
+                     style="background-image: url('assets/Natural Language Processing.png');">
+                </div>
                 <div class="project-content">
                     <h3>Natural Language Processing for Company Text Data</h3>
                     <div class="project-tech">
@@ -867,8 +910,11 @@
 
             <!-- Project 8: COVID-19 Analysis -->
             <div class="project-card">
-                <div class="profile-img"
-                     style="background-image: url('assets/Covid.png'); background-size: cover; background-position: center; font-size: 0;">📊</div>
+                <div class="project-image"
+                     role="img"
+                     aria-label="COVID-19 global impact analysis visuals"
+                     style="background-image: url('assets/Covid.png');">
+                </div>
                 <div class="project-content">
                     <h3>COVID-19 Global Impact &amp; Vaccination Analysis</h3>
                     <div class="project-tech">
@@ -970,4 +1016,3 @@
     </script>
 </body>
 </html>
-
