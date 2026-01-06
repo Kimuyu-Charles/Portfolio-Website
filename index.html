@@ -231,6 +231,54 @@
             line-height: 1.8;
         }
 
+        /* What I Do Section */
+        .what-i-do {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .what-i-do h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-blue-light);
+        }
+
+        .what-intro {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            text-align: center;
+            color: #4b5563;
+            font-size: 1rem;
+        }
+
+        .what-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .what-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        .what-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #111827;
+        }
+
+        .what-card p {
+            color: #4b5563;
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+
         /* Skills Section */
         .skills {
             background: white;
@@ -245,8 +293,16 @@
         .skills h2 {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
             color: var(--primary-blue-light);
+        }
+
+        .skills-intro {
+            max-width: 900px;
+            margin: 0 auto 2.5rem;
+            text-align: center;
+            color: #4b5563;
+            font-size: 1rem;
         }
 
         .skills-grid {
@@ -259,7 +315,7 @@
             background: #f8f9fa;
             padding: 2rem;
             border-radius: 10px;
-            text-align: center;
+            text-align: left;
             transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
             border: 2px solid transparent;
             box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
@@ -269,11 +325,6 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 26px rgba(15, 23, 42, 0.18);
             border-color: var(--primary-blue-light);
-        }
-
-        .skill-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
         }
 
         .skill-card h3 {
@@ -428,8 +479,13 @@
         }
 
         .education-icon {
-            font-size: 2.5rem;
             margin-bottom: 1rem;
+        }
+
+        .education-icon img {
+            height: 48px;
+            width: auto;
+            display: block;
         }
 
         .education-card h3 {
@@ -488,11 +544,6 @@
         .cert-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(1, 22, 64, 0.2);
-        }
-
-        .cert-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
         }
 
         .cert-card h3 {
@@ -683,9 +734,55 @@
         <div class="profile-img about-photo" role="img" aria-label="Portrait of Charles Kimuyu"></div>
         <div class="about-content">
             <h2>About Me</h2>
-            <p>I'm Charles Kimuyu, an Investment &amp; Data Analyst based in Nairobi. I sit at the intersection of finance and analytics: I’m as comfortable building a three-statement model or valuing a company as I am writing Python code, shaping data in SQL, or designing a Power BI dashboard.</p>
+            <p>I'm Charles Kimuyu, an Investment &amp; Data Analyst based in Nairobi. I sit at the intersection of finance and analytics. I combine CFA-level finance training with hands-on Python/SQL/Power BI to build models and dashboards that decision-makers actually use: I’m as comfortable building a three-statement model or valuing a company as I am writing Python code, shaping data in SQL, or designing a Power BI dashboard.</p>
             <p>By day, I work as a Data Analytics Coordinator at Kenya Builders &amp; Concrete, where I’ve automated reporting in Power BI, improved data quality, and helped management track margins, costs, and operational KPIs in near real time. On the side, I build models and tools that blend corporate finance, markets, and data science — from crypto risk dashboards to machine-learning forecasting experiments.</p>
             <p>Having successfully completed all 3 CFA levels and a background in Economics &amp; Sociology, I bring strong grounding in valuation, financial statements, and portfolio thinking. My goal on every project is the same: turn noisy data into clear, decision-ready insight that a CFO, PM, or founder can actually use.</p>
+        </div>
+    </section>
+
+    <!-- What I Do Section -->
+    <section class="what-i-do">
+        <h2>What I Do</h2>
+        <p class="what-intro">
+            I help decision-makers bridge the gap between <strong>finance</strong> and <strong>data</strong>:
+            from classic valuation and budgeting questions to dashboards and models that track risk,
+            performance and opportunities in real time.
+        </p>
+
+        <div class="what-grid">
+            <div class="what-card">
+                <h3>Investment &amp; Corporate Finance Analysis</h3>
+                <p>
+                    Build and maintain three-statement and DCF models, run scenario and sensitivity analysis,
+                    and assess value drivers and risk in corporate and market contexts.
+                </p>
+            </div>
+
+            <div class="what-card">
+                <h3>Data &amp; Business Intelligence</h3>
+                <p>
+                    Design and automate Power BI dashboards and Excel reports, clean and shape data
+                    with SQL/Python, and deliver clear KPIs and insights that management can act on.
+                </p>
+            </div>
+
+            <div class="what-card">
+                <h3>Advanced Analytics &amp; Forecasting</h3>
+                <p>
+                    Experiment with time-series models, machine learning and NLP on financial
+                    and business data to test hypotheses, improve forecasts, and uncover patterns
+                    that aren’t visible in topline summaries.
+                </p>
+            </div>
+
+            <div class="what-card">
+                <h3>Equity Research &amp; Report Writing</h3>
+                <p>
+                    Apply an equity research framework to companies and sectors: structuring the
+                    investment case, analysing fundamentals, and writing concise, decision-ready
+                    reports aligned with CFA-level standards.
+                </p>
+            </div>
         </div>
     </section>
 
@@ -693,36 +790,52 @@
     <section class="skills" id="skills">
         <div class="skills-container">
             <h2>Technical Skills</h2>
+            <p class="skills-intro">
+                Core tools &amp; strengths: <strong>Python</strong> · <strong>SQL</strong> · <strong>Power BI</strong> ·
+                <strong>Excel/VBA</strong> · <strong>Financial Modeling (3-statement &amp; DCF)</strong> ·
+                <strong>Time-series Forecasting</strong> · <strong>NLP</strong> · <strong>Machine Learning</strong> ·
+                <strong>Git &amp; GitHub</strong> · <strong>Equity Research &amp; Report Writing</strong>
+            </p>
+
             <div class="skills-grid">
                 <div class="skill-card">
-                    <div class="skill-icon">🐍</div>
                     <h3>Python &amp; Notebooks</h3>
-                    <p>Pandas, NumPy, Matplotlib, Seaborn, Jupyter, scikit-learn, time-series &amp; NLP basics.</p>
+                    <p>Pandas, NumPy, Matplotlib, Seaborn, scikit-learn and Jupyter for analysis, modeling and reproducible workflows.</p>
                 </div>
+
                 <div class="skill-card">
-                    <div class="skill-icon">📊</div>
                     <h3>Business Intelligence</h3>
-                    <p>Power BI (DAX, data modeling, dashboards), Tableau, report design &amp; stakeholder storytelling.</p>
+                    <p>Power BI (DAX, data modeling, dashboards), Tableau, report design and stakeholder-focused storytelling.</p>
                 </div>
+
                 <div class="skill-card">
-                    <div class="skill-icon">🗄️</div>
                     <h3>Databases &amp; SQL</h3>
-                    <p>Query design, joins, aggregations, view creation, performance-minded analytical queries.</p>
+                    <p>Query design, joins, aggregations, window functions and performance-minded analytical queries for reporting and models.</p>
                 </div>
+
                 <div class="skill-card">
-                    <div class="skill-icon">📈</div>
                     <h3>Financial Modeling</h3>
-                    <p>Three-statement models, DCF, scenario &amp; sensitivity analysis, FAST-style spreadsheets.</p>
+                    <p>Three-statement models, DCF, scenario and sensitivity analysis, FAST-style spreadsheets and KPI dashboards.</p>
                 </div>
+
                 <div class="skill-card">
-                    <div class="skill-icon">🤖</div>
-                    <h3>Machine Learning</h3>
-                    <p>Supervised models, forecasting experiments, model evaluation, feature engineering.</p>
+                    <h3>Machine Learning &amp; Forecasting</h3>
+                    <p>Supervised models, time-series forecasting experiments, model evaluation and feature engineering for financial and business data.</p>
                 </div>
+
                 <div class="skill-card">
-                    <div class="skill-icon">🧩</div>
+                    <h3>Natural Language Processing</h3>
+                    <p>Text cleaning, tokenisation, feature extraction (e.g. bag-of-words / TF-IDF-style) and exploratory analysis of company and industry text.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Equity Research &amp; Report Writing</h3>
+                    <p>Equity research process, investment thesis development, structured report writing and communication in line with CFA practice.</p>
+                </div>
+
+                <div class="skill-card">
                     <h3>Tools &amp; Workflow</h3>
-                    <p>Excel/VBA, Git &amp; GitHub, data cleaning/ETL, documentation, clear communication of results.</p>
+                    <p>Excel/VBA, Git &amp; GitHub, data cleaning/ETL, documentation and clear communication of results to technical and non-technical audiences.</p>
                 </div>
             </div>
         </div>
@@ -946,7 +1059,9 @@
             <h2>Education</h2>
             <div class="education-grid">
                 <div class="education-card">
-                    <div class="education-icon">💼</div>
+                    <div class="education-icon">
+                        <img src="assets/CFA.webp" alt="CFA Institute Logo">
+                    </div>
                     <h3>CFA Institute</h3>
                     <div class="degree">Chartered Financial Analyst (CFA)</div>
                     <div class="year">2025</div>
@@ -954,7 +1069,9 @@
                 </div>
 
                 <div class="education-card">
-                    <div class="education-icon">🎓</div>
+                    <div class="education-icon">
+                        <img src="assets/Egerton.webp" alt="Egerton University Logo">
+                    </div>
                     <h3>Egerton University</h3>
                     <div class="degree">Bachelor of Arts in Economics &amp; Sociology</div>
                     <div class="year">Graduated: 2019</div>
@@ -969,21 +1086,18 @@
         <h2>Certifications</h2>
         <div class="cert-grid">
             <div class="cert-card">
-                <div class="cert-icon">🏆</div>
                 <h3>Python for Data Science</h3>
                 <div class="issuer">Moringa School / DataCamp</div>
                 <div class="date">2023</div>
             </div>
 
             <div class="cert-card">
-                <div class="cert-icon">📈</div>
                 <h3>Data Visualization with Power BI</h3>
                 <div class="issuer">Microsoft / CFI</div>
                 <div class="date">2024</div>
             </div>
 
             <div class="cert-card">
-                <div class="cert-icon">💡</div>
                 <h3>Financial Modeling &amp; Valuation</h3>
                 <div class="issuer">CFI / Wall Street Prep</div>
                 <div class="date">2024</div>
